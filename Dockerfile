@@ -28,8 +28,8 @@ ENV RAILS_ENV=${RAILS_ENV}
 # RUN mkdir $APP_HOME
 WORKDIR $APP_HOME
 
-COPY --chown=$APP_USER:$APP_USER --from=builder /app $APP_HOME
-COPY --chown=$APP_USER:$APP_USER --from=builder /usr/local/bundle/ /usr/local/bundle/
+COPY --from=builder /app $APP_HOME
+COPY --from=builder /usr/local/bundle/ /usr/local/bundle/
 
 USER $APP_USER
 EXPOSE 4567:4567
