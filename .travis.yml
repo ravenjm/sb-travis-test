@@ -1,7 +1,7 @@
 sudo: required
 
 env:
-  DOCKER_IMAGE=${TRAVIS_REPO_SLUG}
+  DOCKER_IMAGE=ravenjm/${TRAVIS_JOB_NAME}
   TRAVIS_TAG=v1.1.9
 
 services:
@@ -14,7 +14,7 @@ before_script:
   - echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
 
 script:
-  - export DOCKER_TAG=${TRAVIS_TAG}.${TRAVIS_BUILD_ID}
+  - export DOCKER_TAG=${TRAVIS_TAG}.${TRAVIS_BUILD_NUMBER}
   - docker build --no-cache -t ${DOCKER_IMAGE}:${DOCKER_TAG} .
   - docker tag ${DOCKER_IMAGE}:${DOCKER_TAG} ${DOCKER_IMAGE}:latest
 
