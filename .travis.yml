@@ -1,7 +1,7 @@
 sudo: required
 
 env:
-  DOCKER_IMAGE=ravenjm/sb-travis-test
+  DOCKER_IMAGE=${TRAVIS_REPO_SLUG}
   TRAVIS_TAG=v1.1.9
 
 services:
