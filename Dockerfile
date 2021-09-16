@@ -19,9 +19,9 @@ RUN bundle config set --local without 'test development' && \
 
 FROM ruby:3.0.2-slim-bullseye
 ARG RAILS_ENV=production
-ENV APP_HOME /app
-ENV APP_USER www-data
-ENV APP_GROUP www-data
+ENV APP_HOME=/app
+ENV APP_USER=www-data
+ENV APP_GROUP=www-data
 ENV RAILS_ENV=${RAILS_ENV}
 
 # #???
