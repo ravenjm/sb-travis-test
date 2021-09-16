@@ -1,0 +1,6 @@
+namespace :assets do
+    # Task of the rake job, can support multiple tasks
+    task :precompile do
+      print 'hello world'
+    end
+  end

@@ -1,7 +1,7 @@
 sudo: required
 
 env:
-  DOCKER_IMAGE=sb/k8s-logs-parser
+  DOCKER_IMAGE=${TRAVIS_REPO_SLUG}
   TRAVIS_TAG=v1.1.9
 
 services:
