@@ -1,7 +1,7 @@
 sudo: required
 
 env:
-  DOCKER_IMAGE=ravenjm/${TRAVIS_JOB_NAME}
+  DOCKER_IMAGE=ravenjm/sb-travis-test
   TRAVIS_TAG=v1.1.9
 
 services:
