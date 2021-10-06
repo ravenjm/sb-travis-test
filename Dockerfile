@@ -8,6 +8,8 @@ ENV HOME /app
 COPY ./build /build
 COPY ./app /app
 
+#karkar
+
 RUN apt-get update && \
     apt-get install tzdata libxslt-dev libxml2-dev build-essential libssl-dev -y
 RUN bundle config set --local without 'test development' && \
