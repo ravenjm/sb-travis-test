@@ -8,7 +8,6 @@ ENV HOME /app
 COPY ./build /build
 COPY ./app /app
 
-#karkar
 
 RUN apt-get update && \
     apt-get install tzdata libxslt-dev libxml2-dev build-essential libssl-dev -y
@@ -26,7 +25,7 @@ ENV APP_USER=www-data
 ENV APP_GROUP=www-data
 ENV RAILS_ENV=${RAILS_ENV}
 
-# #???
+#sync test
 # RUN mkdir $APP_HOME
 WORKDIR $APP_HOME
 
