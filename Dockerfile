@@ -1,5 +1,5 @@
 FROM ruby:3.0.2 AS builder
-#karkar
+#karkaraasaasass
 WORKDIR /build
 
 ARG RAILS_ENV=production
